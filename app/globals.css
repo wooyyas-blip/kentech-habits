@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 켄텍 청록(에너지 블루)을 액센트로 — 깔끔한 화이트 베이스 */
+  --paper: #F7F9FA;
+  --paper-raised: #FFFFFF;
+  --ink: #16242B;
+  --ink-soft: #5E727C;
+  --line: #E1E8EB;
+  /* 켄텍 시그니처 청록 계열 */
+  --kentech: #00A6B6;
+  --kentech-deep: #007E8C;
+  --kentech-soft: #DCF1F3;
+  /* streak 강조용 보조 오렌지 */
+  --ember: #F2792B;
+  --ember-deep: #D45F18;
+  --font-sans: "Pretendard", "Pretendard Variable", -apple-system,
+    BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: "Pretendard", ui-monospace, monospace;
+}
+
+html {
+  color-scheme: light only;
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 모션 줄이기 설정 존중 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 체크 시 살짝 차오르는 모션 */
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.16); }
+  100% { transform: scale(1); }
+}
+.animate-pop { animation: pop 0.32s cubic-bezier(0.34, 1.56, 0.64, 1); }
+
+:focus-visible {
+  outline: 2px solid var(--kentech);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
