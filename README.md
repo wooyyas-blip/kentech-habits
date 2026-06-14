@@ -52,7 +52,4 @@ npm run start
 ```
 
 ## 배포 URL
-
-(Vercel 배포 후 여기에 링크를 넣어주세요)
-
-예: `https://kentech-habits.vercel.app`
+https://kentech-habits.vercel.app
